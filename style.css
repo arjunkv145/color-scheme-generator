@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.app {
+    width: 100%;
+    max-width: 750px;
+    margin: 2em auto;
+    padding: 1em;
+}
+.app--title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #303030;
+}
+.app--form {
+    width: 80%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#color-input {
+    width: 6em;
+    height: 3em;
+    width: 26%;
+}
+.scheme-input, .btn {
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #404040;
+}
+.scheme-input {
+    padding: .5em .8em;
+    width: 70%;
+}
+.btn {
+    padding: .7em 1.5em;
+    background: #5895f8;
+    color: white;
+    border: 1px solid #265195;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 300ms;
+}
+.btn:hover {
+    background: #3269c2;
+}
+.app--cards-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.card {
+    width: 140px;
+    height: 160px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+}
+.card--color {
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card--title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1em;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+.card--color-code {
+    text-align: center;
+    margin-top: 1.8em;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+.copy-text-animation::before {
+    content: 'copied';
+    position: absolute;
+    background-color: #202020;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20%);
+    animation: fade 500ms ease-in 500ms 1 forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 438.4px) {
+    .app {
+        margin: 1em auto;
+    }
+    .app--form {
+        width: 100%;
+        margin: 1.4em auto 2em;
+    }
+    .app--cards-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 261px) {
+    .app--title {
+        font-size: 1.5rem;
+    }
+}
